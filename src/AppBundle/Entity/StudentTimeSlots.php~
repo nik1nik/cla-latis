@@ -1,0 +1,83 @@
+<?php
+
+namespace AppBundle\Entity;
+
+/**
+ * StudentTimeSlots
+ */
+class StudentTimeSlots
+{
+    /**
+     * @var integer
+     */
+    private $studentId;
+
+    /**
+     * @var integer
+     */
+    private $timeslotId;
+
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * Set studentId
+     *
+     * @param integer $studentId
+     *
+     * @return StudentTimeSlots
+     */
+    public function setStudentId($studentId)
+    {
+        $this->studentId = $studentId;
+
+        return $this;
+    }
+
+    /**
+     * Get studentId
+     *
+     * @return integer
+     */
+    public function getStudentId()
+    {
+        return $this->studentId;
+    }
+
+    /**
+     * Set timeslotId
+     *
+     * @param integer $timeslotId
+     *
+     * @return StudentTimeSlots
+     */
+    public function setTimeslotId($timeslotId)
+    {
+        $this->timeslotId = $timeslotId;
+
+        return $this;
+    }
+
+    /**
+     * Get timeslotId
+     *
+     * @return integer
+     */
+    public function getTimeslotId()
+    {
+        return $this->timeslotId;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

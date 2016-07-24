@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Timeslot" table="timeslot">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="testId" type="integer" column="test_id" nullable="false">
+      <options>
+        <option name="unsigned"/>
+        <option name="comment">FK from tests</option>
+      </options>
+    </field>
+    <field name="startTime" type="datetime" column="start_time" nullable="false"/>
+    <field name="endTime" type="datetime" column="end_time" nullable="false"/>
+    <field name="slotsMax" type="integer" column="slots_max" nullable="false">
+      <options>
+        <option name="unsigned"/>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="slotsTaken" type="integer" column="slots_taken" nullable="false">
+      <options>
+        <option name="unsigned"/>
+        <option name="default">0</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

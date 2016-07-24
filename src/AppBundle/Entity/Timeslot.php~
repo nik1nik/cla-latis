@@ -1,0 +1,61 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Timeslot
+ *
+ * @ORM\Table(name="timeslot")
+ * @ORM\Entity
+ */
+class Timeslot
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="test_id", type="integer", nullable=false)
+     */
+    private $testId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="start_time", type="datetime", nullable=false)
+     */
+    private $startTime;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="end_time", type="datetime", nullable=false)
+     */
+    private $endTime;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="slots_max", type="integer", nullable=false)
+     */
+    private $slotsMax = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="slots_taken", type="integer", nullable=false)
+     */
+    private $slotsTaken = '0';
+
+
+}
+

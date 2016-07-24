@@ -1,0 +1,54 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Student
+ *
+ * @ORM\Table(name="student")
+ * @ORM\Entity
+ */
+class Student
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="student_name", type="string", length=50, nullable=false)
+     */
+    private $studentName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="student_email", type="string", length=100, nullable=false)
+     */
+    private $studentEmail;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="init_time", type="datetime", nullable=false)
+     */
+    private $initTime = 'CURRENT_TIMESTAMP';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="remove_this", type="string", length=10, nullable=false)
+     */
+    private $removeThis;
+
+
+}
+

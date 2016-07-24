@@ -1,0 +1,83 @@
+<?php
+
+namespace AppBundle\Entity;
+
+/**
+ * Tests
+ */
+class Tests
+{
+    /**
+     * @var string
+     */
+    private $instructor;
+
+    /**
+     * @var string
+     */
+    private $testName;
+
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * Set instructor
+     *
+     * @param string $instructor
+     *
+     * @return Tests
+     */
+    public function setInstructor($instructor)
+    {
+        $this->instructor = $instructor;
+
+        return $this;
+    }
+
+    /**
+     * Get instructor
+     *
+     * @return string
+     */
+    public function getInstructor()
+    {
+        return $this->instructor;
+    }
+
+    /**
+     * Set testName
+     *
+     * @param string $testName
+     *
+     * @return Tests
+     */
+    public function setTestName($testName)
+    {
+        $this->testName = $testName;
+
+        return $this;
+    }
+
+    /**
+     * Get testName
+     *
+     * @return string
+     */
+    public function getTestName()
+    {
+        return $this->testName;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

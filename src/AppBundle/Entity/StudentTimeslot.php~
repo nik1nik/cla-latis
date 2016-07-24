@@ -1,0 +1,40 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * StudentTimeslot
+ *
+ * @ORM\Table(name="student_timeslot")
+ * @ORM\Entity
+ */
+class StudentTimeslot
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="student_id", type="integer", nullable=false)
+     */
+    private $studentId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="timeslot_id", type="integer", nullable=false)
+     */
+    private $timeslotId;
+
+
+}
+

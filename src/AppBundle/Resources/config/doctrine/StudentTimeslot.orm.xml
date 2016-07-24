@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\StudentTimeslot" table="student_timeslot">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="studentId" type="integer" column="student_id" nullable="false">
+      <options>
+        <option name="unsigned"/>
+        <option name="comment">FK from students</option>
+      </options>
+    </field>
+    <field name="timeslotId" type="integer" column="timeslot_id" nullable="false">
+      <options>
+        <option name="unsigned"/>
+        <option name="comment">FK from time slots</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

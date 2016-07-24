@@ -1,0 +1,112 @@
+<?php
+
+namespace AppBundle\Entity;
+
+/**
+ * Students
+ */
+class Students
+{
+    /**
+     * @var string
+     */
+    private $studentEmail;
+
+    /**
+     * @var \DateTime
+     */
+    private $initTime = 'CURRENT_TIMESTAMP';
+
+    /**
+     * @var string
+     */
+    private $removeThis;
+
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * Set studentEmail
+     *
+     * @param string $studentEmail
+     *
+     * @return Students
+     */
+    public function setStudentEmail($studentEmail)
+    {
+        $this->studentEmail = $studentEmail;
+
+        return $this;
+    }
+
+    /**
+     * Get studentEmail
+     *
+     * @return string
+     */
+    public function getStudentEmail()
+    {
+        return $this->studentEmail;
+    }
+
+    /**
+     * Set initTime
+     *
+     * @param \DateTime $initTime
+     *
+     * @return Students
+     */
+    public function setInitTime($initTime)
+    {
+        $this->initTime = $initTime;
+
+        return $this;
+    }
+
+    /**
+     * Get initTime
+     *
+     * @return \DateTime
+     */
+    public function getInitTime()
+    {
+        return $this->initTime;
+    }
+
+    /**
+     * Set removeThis
+     *
+     * @param string $removeThis
+     *
+     * @return Students
+     */
+    public function setRemoveThis($removeThis)
+    {
+        $this->removeThis = $removeThis;
+
+        return $this;
+    }
+
+    /**
+     * Get removeThis
+     *
+     * @return string
+     */
+    public function getRemoveThis()
+    {
+        return $this->removeThis;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

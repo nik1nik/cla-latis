@@ -1,0 +1,66 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CommonConditions
+ *
+ * @ORM\Table(name="common_conditions")
+ * @ORM\Entity
+ */
+class CommonConditions
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="common_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $commonId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="str", type="string", length=200, nullable=false)
+     */
+    private $str;
+
+
+
+    /**
+     * Set str
+     *
+     * @param string $str
+     *
+     * @return CommonConditions
+     */
+    public function setStr($str)
+    {
+        $this->str = $str;
+
+        return $this;
+    }
+
+    /**
+     * Get str
+     *
+     * @return string
+     */
+    public function getStr()
+    {
+        return $this->str;
+    }
+
+    /**
+     * Get commonId
+     *
+     * @return integer
+     */
+    public function getCommonId()
+    {
+        return $this->commonId;
+    }
+}
