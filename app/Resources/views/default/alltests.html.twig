@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+
+        <div class="starter-template">
+            <h1>All available tests</h1>
+
+                {% for result in results %}
+                    <p>{{ result.testName }} Date and Time: {{ result.startTime|date('m/d/Y H:i') }} to {{ result.endTime|date('m/d/Y H:i') }}</p>
+                {% endfor %}
+
+        </div>
+
+    </div>
+{% endblock %}
+
+
